@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>MealDB API</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+
+    <i class="material-icons" type="button" id="btn1" onclick="two();one()">open_with</i>
+    <script type="text/javascript">
+   	var btn1=document.getElementById("btn1")
+	  var el=document.documentElement;
+	
+	  function two(){
+
+		if (document.exitFullscreen) {
+			document.exitFullscreen()
+		}	
+	  }
+	  function one(){
+		if (el.requestFullscreen) {
+			el.requestFullscreen()
+			
+		}
+	  }
+</script>
+  
+    <div class="container">
+      <div class="header">
+        <div class="">
+          <h1>Looking for a Recipe?</h1>
+        </div>
+      </div>
+      <div class="flex">
+        <form class="flex" id="submit">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search by Meal, Category, Region or Main ingredient"
+          />
+          <button class="search-btn" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <button class="random-btn" id="random">
+          <i class="fas fa-random"></i>
+        </button>
+      </div>
+
+      <div id="result-heading"></div>
+      <div class="meals" id="meals"></div>
+      <div id="single-meal"></div>
+    </div>
+
+  </body>
+</html>
